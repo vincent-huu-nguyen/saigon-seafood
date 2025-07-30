@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { Menu, X } from 'lucide-react'
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -37,28 +38,29 @@ export default function Navbar() {
 
         {/* Hamburger icon */}
         <button
-          className="md:hidden text-white text-2xl focus:outline-none"
+          className="md:hidden text-white"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle Menu"
         >
-          {isOpen ? '✕' : '☰'}
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* Mobile nav with animation */}
+      {/* Mobile nav */}
       <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out md:hidden ${
+        className={`transition-all duration-300 ease-in-out md:hidden ${
           isOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'
-        }`}
+        } overflow-hidden`}
       >
         <div className="flex flex-col gap-4 mt-4 px-6 pb-4">
           {navItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}
+              onClick={() => setIsOpen(false)}
               className={`hover:underline ${
                 pathname === item.href ? 'font-bold underline' : ''
               }`}
-              onClick={() => setIsOpen(false)} // close on click
             >
               {item.name}
             </Link>
