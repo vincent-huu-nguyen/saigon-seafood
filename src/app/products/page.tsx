@@ -50,9 +50,9 @@ export default function ProductsPage() {
                     <motion.div
                         key={index}
                         className="bg-gray-100 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition"
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 0 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.1, duration: 0.4 }}
+                        transition={{ duration: 0.4 }}
                     >
                         <img
                             src={product.image}
