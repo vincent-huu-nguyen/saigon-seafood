@@ -1,0 +1,12 @@
+.animated-bg {
+  animation: move-bg 90s linear infinite;
+}
+
+@keyframes move-bg {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 1000px -1000px; /* moves diagonally up-right */
+  }
+}

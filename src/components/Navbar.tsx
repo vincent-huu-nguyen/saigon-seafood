@@ -20,7 +20,7 @@ export default function Navbar() {
     <>
       <nav className="bg-blue-900 text-white px-6 py-4 shadow-md">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <span className="text-xl font-semibold tracking-wide">SAIGON SEAFOOD</span>
+          <span className="text-2xl font-semibold tracking-wide">SAIGON SEAFOOD</span>
 
           {/* Desktop nav */}
           <div className="hidden md:flex gap-6">
