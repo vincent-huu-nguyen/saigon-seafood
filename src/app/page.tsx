@@ -6,7 +6,7 @@ import '@/styles/background.css' // We'll put the animation here
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen flex flex-col items-center justify-center p-8 text-gray-800">
+    <main className="relative min-h-screen flex flex-col items-center p-8 text-gray-800 pt-48">
       {/* Animated background */}
       <div
         className="absolute inset-0 bg-repeat animated-bg"
